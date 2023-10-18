@@ -44,7 +44,7 @@ namespace R5T.F0102
                 {
                     var contentPathsFilePath = Instances.ProjectPathsOperator.GetTailwindContentPathsJsonFilePath(projectFilePath);
 
-                    var output = Instances.FileSystemOperator.FileExists(contentPathsFilePath);
+                    var output = Instances.FileSystemOperator.Exists_File(contentPathsFilePath);
                     return output;
                 })
                 .OrderAlphabetically_OnlyIfDebug()
